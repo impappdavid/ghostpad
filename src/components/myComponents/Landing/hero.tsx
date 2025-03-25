@@ -2,34 +2,36 @@
 
 
 
-function Navbar() {
+function Hero() {
 
     return (
         <>
-            <div className="w-full max-w-4xl h-8  mt-32 px-2 flex flex-col items-center gap-16">
-                <div className="font-body w-fit bg-zinc-900 border rounded-full px-3 py-1 text-xs text-zinc-400">GHOSTPAD</div>
-                <div className="flex flex-col gap-4 items-center">
-                    <div className="text-4xl font-body">
-                        Powerful, Effortless Note-Taking <br /> for Everyone.
+            <div className="w-full flex justify-center">
+                <div className="w-full max-w-4xl h-8  mt-32 px-2 flex flex-col items-center gap-14">
+                    <div className="font-body w-fit bg-gradient-to-b from-zinc-800 to-zinc-900 border rounded-full px-3 py-1 text-xs text-zinc-400">GHOSTPAD</div>
+                    <div className="flex flex-col gap-12 items-center">
+                        <div className="flex flex-col gap-4 items-center">
+                            <div className="text-5xl font-body">
+                                Effortless Notes, <br /> Powerful Organization
+                            </div>
+                            <div className="text-zinc-400 text-lg max-w-xl font-body">
+                                Capture ideas, write code, and organize your thoughts seamlessly—all in one powerful, easy-to-use workspace.
+                            </div>
+                        </div>
+                        <div className="flex gap-2">
+                            <a href="#" className="px-4 py-2 text-md font-body bg-[#ab9ff2c9]  hover:bg-[#ab9ff2c1] rounded-xl transition-all flex items-center">
+                                Get started now
+                            </a>
+                        </div>
                     </div>
-                    <div className="text-zinc-400 text-sm max-w-lg font-body">
-                        Capture ideas, organize thoughts, and write with ease whether you're a developer, creator, or anyone who loves structured note-taking.
+                    <div className="w-full min-h-96 border rounded-xl">
+                        asd
                     </div>
-                </div>
-                <div className="flex flex-col gap-8 items-center">
-                    
-                    <div className="flex gap-2">
-                        <a href="#" className="font-body px-3 py-1.5 text-sm border  hover:bg-zinc-900 rounded-md transition-all">
-                            Log in
-                        </a>
-                        <a href="#" className="px-4 py-1.5 text-sm font-body bg-[#ab9ff2c9]  hover:bg-[#ab9ff2c1] rounded-md transition-all flex items-center">
-                            Get started
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </>
     )
 }
 
-export default Navbar
+export default Hero

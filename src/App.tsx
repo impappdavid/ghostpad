@@ -1,16 +1,19 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Hero from './components/myComponents/Landing/hero'
 import Navbar from './components/myComponents/Landing/navbar'
+import Articles from './articles/Articles'
 
 function App() {
 
   return (
-    <>
-      <div className="w-full flex justify-center">
-        <Navbar />
-        <Hero />
-      </div>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/articles" element={<Articles />} />
+      </Routes>
+    </Router>
   )
 }
 
