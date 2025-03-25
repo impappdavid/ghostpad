@@ -1,13 +1,15 @@
 import './App.css'
-import { Button } from './components/ui/button'
+import Hero from './components/myComponents/Landing/hero'
+import Navbar from './components/myComponents/Landing/navbar'
 
 function App() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center ">
-      <Button >Click me</Button>
-    </div>
+      <div className="w-full flex justify-center">
+        <Navbar />
+        <Hero />
+      </div>
     </>
   )
 }
