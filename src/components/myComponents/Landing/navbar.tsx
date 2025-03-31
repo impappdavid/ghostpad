@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import logo from "../../../../public/ghostpad.png";
+import { useState } from "react";
 function Navbar() {
+    const [showPassword, setShowPassword] = useState(false)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [rememberMe, setRememberMe] = useState(false)
+    const [showLogin, setShowLogin] = useState(false)
+    const [showSignUp, setShowSignUp] = useState(false)
 
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+        console.log({ email, password, rememberMe })
+        // Add your authentication logic here
+    }
+
+    const openSignUp = () => {
+        setShowLogin(false)
+        setShowSignUp(true)
+    }
     return (
         <>
             <div className="w-full flex justify-center ">
@@ -31,10 +48,10 @@ function Navbar() {
                     </div>
 
                     <div className="flex gap-2">
-                        <a href="#" className="font-body px-3 py-1.5 text-sm border  hover:bg-zinc-950/50 rounded-xl transition-all">
+                        <a href="/signin" className="font-body px-3 py-1.5 text-sm border  hover:bg-zinc-950/50 rounded-xl transition-all cursor-pointer">
                             Log in
                         </a>
-                        <a href="#" className="font-body px-3 py-1.5 text-sm  bg-[#ab9ff2c9]  hover:bg-[#ab9ff2c1] rounded-xl transition-all flex items-center">
+                        <a href="/signup" className="font-body px-3 py-1.5 text-sm  bg-[#ab9ff2c9] cursor-pointer  hover:bg-[#ab9ff2c1] rounded-xl transition-all flex items-center">
                             Get started
                         </a>
                     </div>
