@@ -11,7 +11,6 @@ function Content() {
             </div>
             <div className="flex ">
                 <FileExplorer />
-                <Editor />
             </div>
         </div>
         </>

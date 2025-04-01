@@ -2,7 +2,7 @@
 function Editor() {
     return(
         <>
-            <div className="w-full h-full"></div>
+            <div className="w-full h-full bg-muted/30"></div>
         </>
     )
 }
